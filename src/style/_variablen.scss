@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+
+$accent-green: #ffeb3b;
+$bg-color: #ffdee9;
+$bg-gradient-end: #b5fffc;
+$text-color: #333;
+$card-bg: #ffffff;
+$funny-font: "Rubik Bubbles", system-ui;
+$body-font: "Comic Neue", cursive;
+
+@mixin header-text {
+  font-family: $funny-font;
+  font-size: 5rem;
+  font-weight: 400;
+  text-shadow: 4px 4px 0px #ff4081;
+  color: #fff;
+  letter-spacing: 2px;
+  transform: rotate(-2deg);
+}
+
+@mixin input-text {
+  font-family: $body-font;
+  font-size: 1.5rem;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  color: #555;
+  line-height: 1.6;
+}
+
+@mixin btn-accent {
+  font-family: $body-font;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  background-color: #ff4081;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 64, 129, 0.6);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}

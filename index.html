@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/smiling.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joke App</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="header">Witze App</h1>
+      <div class="input-joke">
+        <p class="input-joke__text">
+          Klick auf den Button um neue Witze zu laden!
+        </p>
+        <div class="input-joke__process">
+          <button class="input-joke__load">Neuen Witz laden</button>
+          <button class="input-joke__save">
+            Witz speichern
+            <img src="./public/save.svg" alt="Save Icon" />
+          </button>
+        </div>
+      </div>
+      <div class="saved-jokes">
+        <h2 class="saved-jokes__text">Gespeicherte Witze</h2>
+        <section class="saved-jokes__list">
+          
+        </section>
+      </div>
+    </div>
+    <!-- Aufruf .js -->
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
