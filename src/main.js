@@ -1,4 +1,5 @@
 import "./style/main.scss";
+import deleteIcon from "../public/delete.svg";
 
 const jokeText = document.querySelector(".input-joke__text");
 const loadBtn = document.querySelector(".input-joke__load");
@@ -67,10 +68,9 @@ function displaySavedJokes() {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete-btn");
-    const deleteIcon = document.createElement("img");
-    deleteIcon.src = "./delete.svg";
-    console.log(deleteIcon.src);
-    deleteBtn.appendChild(deleteIcon);
+    const deleteIconImg = document.createElement("img");
+    deleteIconImg.src = deleteIcon;
+    deleteBtn.appendChild(deleteIconImg);
     deleteBtn.addEventListener("click", () => {
       deleteJoke(joke);
     });
