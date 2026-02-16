@@ -89,17 +89,13 @@ body {
       background: #76ff03;
     }
   }
-
-  &.has-joke {
-    .input-joke__save {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-
-      img {
-        width: 1.4rem;
-        height: 1.4rem;
-      }
+  &__save--visible {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    img {
+      width: 1.4rem;
+      height: 1.4rem;
     }
   }
 }
