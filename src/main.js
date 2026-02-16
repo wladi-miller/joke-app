@@ -4,7 +4,6 @@ const jokeText = document.querySelector(".input-joke__text");
 const loadBtn = document.querySelector(".input-joke__load");
 const saveBtn = document.querySelector(".input-joke__save");
 const savedList = document.querySelector(".saved-jokes__list");
-const inputJokeContainer = document.querySelector(".input-joke");
 
 async function getJoke() {
   try {
