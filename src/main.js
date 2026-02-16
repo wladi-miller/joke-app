@@ -1,6 +1,5 @@
 import "./style/main.scss";
 import deleteIcon from "../public/delete.svg";
-// DOM-Elemente auswählen
 
 const jokeText = document.querySelector(".input-joke__text");
 const loadBtn = document.querySelector(".input-joke__load");
