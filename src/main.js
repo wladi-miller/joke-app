@@ -6,6 +6,10 @@ const loadBtn = document.querySelector(".input-joke__load");
 const saveBtn = document.querySelector(".input-joke__save");
 const savedList = document.querySelector(".saved-jokes__list");
 
+loadBtn.addEventListener("click", getJoke);
+jokeText.textContent =
+  "Kein Witz vorhanden, bitte den Button 'neuen Witz laden' drücken";
+
 async function getJoke() {
   try {
     const response = await fetch(
@@ -24,9 +28,7 @@ async function getJoke() {
   }
 }
 
-loadBtn.addEventListener("click", getJoke);
-jokeText.textContent =
-  "Kein Witz vorhanden, bitte den Button 'neuen Witz laden' drücken";
+saveBtn.addEventListener("click", saveJoke);
 
 function saveJoke() {
   const joke = jokeText.textContent;
@@ -39,7 +41,6 @@ function saveJoke() {
     alert("Du hast diesen Witz bereits gespeichert! 🐵");
   }
 }
-saveBtn.addEventListener("click", saveJoke);
 
 function deleteJoke(jokeToDelete) {
   let savedJokes = JSON.parse(localStorage.getItem("savedJokes")) || [];
@@ -47,6 +48,8 @@ function deleteJoke(jokeToDelete) {
   localStorage.setItem("savedJokes", JSON.stringify(savedJokes));
   displaySavedJokes();
 }
+
+displaySavedJokes();
 
 function displaySavedJokes() {
   const savedJokes = JSON.parse(localStorage.getItem("savedJokes")) || [];
@@ -79,4 +82,3 @@ function displaySavedJokes() {
     savedList.appendChild(jokeElement);
   });
 }
-displaySavedJokes();
