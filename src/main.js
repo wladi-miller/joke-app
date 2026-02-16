@@ -68,7 +68,8 @@ function displaySavedJokes() {
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete-btn");
     const deleteIcon = document.createElement("img");
-    deleteIcon.src = "/joke-app/public/delete.svg";
+    deleteIcon.src = "joke-app/delete.svg";
+    console.log(deleteIcon.src);
     deleteBtn.appendChild(deleteIcon);
     deleteBtn.addEventListener("click", () => {
       deleteJoke(joke);
