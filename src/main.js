@@ -18,7 +18,7 @@ async function getJoke() {
     } else {
       jokeText.textContent = data.joke;
     }
-    saveBtn.classList.add("input-joke__save--visible");
+    saveBtn.classList.add("input-joke__save--invisible");
   } catch (error) {
     alert("Fehler beim Laden des Witzes. Bitte versuche es erneut.");
   }
